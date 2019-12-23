@@ -1,0 +1,102 @@
+<!-- Sidenav -->
+<nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+    <div class="scrollbar-inner">
+        <!-- Brand -->
+        <div class="sidenav-header d-flex align-items-center">
+            <a class="navbar-brand" href="/dashboard">
+                <img src="/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            </a>
+            <div class="ml-auto">
+                <!-- Sidenav toggler -->
+                <div class="sidenav-toggler d-none d-xl-block" data-action="sidenav-unpin" data-target="#sidenav-main">
+                    <div class="sidenav-toggler-inner">
+                        <i class="sidenav-toggler-line"></i>
+                        <i class="sidenav-toggler-line"></i>
+                        <i class="sidenav-toggler-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-inner">
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                <!-- Nav items -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a href="/posts/display" class="nav-link"></a>
+                                </li>
+                                <% if(locals.userInfo && locals.userInfo.role === 'ADMIN') { %>
+                                <li class="nav-item">
+                                    <a href="/user-management" class="nav-link">User Management</a>
+                                </li>
+                                <% } %>
+                                <% if(locals.userInfo && ['ADMIN', 'CREATOR'].includes(locals.userInfo.role)) { %>
+                                <li class="nav-item">
+                                    <a href="/category-management" class="nav-link">Category Management</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/tag-management" class="nav-link">Tag Management</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/posts/management" class="nav-link">Post Management</a>
+                                </li>
+                                <% } %>
+                            </ul>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <%= locals.pageCategory && pageCategory === 'components' && 'active' %>" href="#navbar-components" role="button" aria-expanded="false" aria-controls="navbar-components">
+                            <i class="ni ni-shop text-info"></i>
+                            <span class="nav-link-text">Home</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link <%= locals.pageCategory && pageCategory === 'components' && 'active' %>" href="#navbar-components" role="button" aria-expanded="false" aria-controls="navbar-components">
+                            <i class="ni ni-sound-wave text-info"></i>
+                            <span class="nav-link-text">Vitals</span>
+                        </a>
+                    </li>
+                    
+                     <li class="nav-item">
+                        <a class="nav-link <%= locals.pageCategory && pageCategory === 'components' && 'active' %>" href="#navbar-components" role="button" aria-expanded="false" aria-controls="navbar-components">
+                            <i class="ni ni-ui-04 text-info"></i>
+                            <span class="nav-link-text">Blood</span>
+                        </a>
+                    </li>
+                    
+                     <li class="nav-item">
+                        <a class="nav-link <%= locals.pageCategory && pageCategory === 'components' && 'active' %>" href="#navbar-components" role="button" aria-expanded="false" aria-controls="navbar-components">
+                            <i class="ni ni-ui-04 text-info"></i>
+                            <span class="nav-link-text">Messages</span>
+                        </a>
+                    </li>
+                    
+                     <li class="nav-item">
+                        <a class="nav-link <%= locals.pageCategory && pageCategory === 'components' && 'active' %>" href="#navbar-components" role="button" aria-expanded="false" aria-controls="navbar-components">
+                            <i class="ni ni-zoom-2 text-info"></i>
+                            <span class="nav-link-text">Search</span>
+                        </a>
+                    </li>
+                    
+                     <li class="nav-item">
+                        <a class="nav-link <%= locals.pageCategory && pageCategory === 'components' && 'active' %>" href="#navbar-components" role="button" aria-expanded="false" aria-controls="navbar-components">
+                            <i class="ni ni-ui-04 text-info"></i>
+                            <span class="nav-link-text">Apps</span>
+                        </a>
+                    </li>
+                    
+                     <li class="nav-item">
+                        <a class="nav-link <%= locals.pageCategory && pageCategory === 'components' && 'active' %>" href="#navbar-components" role="button" aria-expanded="false" aria-controls="navbar-components">
+                            <i class="ni ni-settings text-info"></i>
+                            <span class="nav-link-text">Settings</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
