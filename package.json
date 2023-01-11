@@ -53,7 +53,7 @@
     "gulp-wait": "0.0.2",
     "http-errors": "~1.6.2",
     "joi": "^14.3.1",
-    "knex": "^0.16.3",
+    "knex": "^2.4.0",
     "knex-migrate": "^1.7.2",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
